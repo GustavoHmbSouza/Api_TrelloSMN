@@ -22,7 +22,7 @@ namespace Repository.RepositoriesApiTrello
             string tokken = "ba50b1de587070a955ebd7dc02bdc292acee46f4460e77ea9c4b78620029c86e";
             string quadro = "yy3ztFA5";
 
-            var requisicaoWeb = WebRequest.CreateHttp("https://api.trello.com/1/boards/" + quadro + "/cards/?fields=desc,idMembers,name,id,due,url&key=" + key + "&token=" + tokken);
+            var requisicaoWeb = WebRequest.CreateHttp("https://api.trello.com/1/boards/" + quadro + "/cards/?fields=desc,idMembers,name,id,due,badges,url&key=" + key + "&token=" + tokken);
             requisicaoWeb.Method = "GET";
             using (var resposta = requisicaoWeb.GetResponse())
             {
