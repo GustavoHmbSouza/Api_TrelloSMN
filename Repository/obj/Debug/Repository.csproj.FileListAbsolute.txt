@@ -1,0 +1,9 @@
+F:\RepositoriesPessoal\TrelloSMN\TrelloSMN\Repository\bin\Debug\Repository.dll
+F:\RepositoriesPessoal\TrelloSMN\TrelloSMN\Repository\bin\Debug\Repository.pdb
+F:\RepositoriesPessoal\TrelloSMN\TrelloSMN\Repository\obj\Debug\Repository.dll
+F:\RepositoriesPessoal\TrelloSMN\TrelloSMN\Repository\obj\Debug\Repository.pdb
+F:\RepositoriesPessoal\TrelloSMN\TrelloSMN\Repository\bin\Debug\Domain.dll
+F:\RepositoriesPessoal\TrelloSMN\TrelloSMN\Repository\bin\Debug\Newtonsoft.Json.dll
+F:\RepositoriesPessoal\TrelloSMN\TrelloSMN\Repository\bin\Debug\Domain.pdb
+F:\RepositoriesPessoal\TrelloSMN\TrelloSMN\Repository\bin\Debug\Newtonsoft.Json.xml
+F:\RepositoriesPessoal\TrelloSMN\TrelloSMN\Repository\obj\Debug\Repository.csprojResolveAssemblyReference.cache
