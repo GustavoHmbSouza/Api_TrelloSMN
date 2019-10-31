@@ -14,11 +14,10 @@ namespace Repository.RepositoriesApiTrello
         //string tokken = "ba50b1de587070a955ebd7dc02bdc292acee46f4460e77ea9c4b78620029c86e";
         //string quadro = "LNLrC30H";
 
-        public List<DadosCard> Get()
+        public IEnumerable<DadosCard> Get()
         {
 
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Ssl3;
-            List<DadosCard> post;
             string key = "67a7b156c076bdb0c32ef0c7fac3e4e3";
             string tokken = "ba50b1de587070a955ebd7dc02bdc292acee46f4460e77ea9c4b78620029c86e";
             string quadro = "yy3ztFA5";
@@ -30,14 +29,10 @@ namespace Repository.RepositoriesApiTrello
                 var streamDados = resposta.GetResponseStream();
                 StreamReader reader = new StreamReader(streamDados);
                 object objResponse = reader.ReadToEnd();
-                post = JsonConvert.DeserializeObject<List<DadosCard>>(objResponse.ToString());
                 streamDados.Close();
                 resposta.Close();
+                return JsonConvert.DeserializeObject<IEnumerable<DadosCard>>(objResponse.ToString());
             }
-
-            return post;
         }
-
-
     }
 }

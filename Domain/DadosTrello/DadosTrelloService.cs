@@ -12,9 +12,16 @@ namespace Domain.DadosTrello
             _dadosQuadroDesenvRepository = dadosQuadroDesenvRepository;
         }
 
-        public List<DadosCard> Get()
+        public IEnumerable<DadosCard> Get()
         {
-            return _dadosQuadroDesenvRepository.Get();
+            IEnumerable<DadosCard> dadosCard = _dadosQuadroDesenvRepository.Get();
+
+            foreach (var linha in dadosCard)
+            {
+                linha.setDados();
+            }
+
+            return dadosCard;
         }
     }
 }
