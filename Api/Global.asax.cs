@@ -9,7 +9,8 @@ namespace Api
         protected void Application_Start()
         {
             GlobalConfiguration.Configure(config => config.Register(new SimpleInjectorWebApiDependencyResolver(SimpleInjectorContainer.Build())));
-
+            
         }
+
     }
 }
