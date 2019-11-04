@@ -5,6 +5,6 @@ namespace Domain.DadosTrello
 {
     public interface IDadosTrelloService
     {
-        IEnumerable<DadosCard> Get();
+        List<DadosCard> Get();
     }
 }

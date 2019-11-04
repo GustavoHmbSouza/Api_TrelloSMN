@@ -12,13 +12,20 @@ namespace Domain.DadosTrello
             _dadosQuadroDesenvRepository = dadosQuadroDesenvRepository;
         }
 
-        public IEnumerable<DadosCard> Get()
+        public List<DadosCard> Get()
         {
-            IEnumerable<DadosCard> dadosCard = _dadosQuadroDesenvRepository.Get();
+            List<DadosCard> dadosCard = _dadosQuadroDesenvRepository.Get();
 
-            foreach (var linha in dadosCard)
+            int tamList = dadosCard.Count;
+            for (int i=0; i< tamList; i++)
             {
-                linha.setDados();
+                dadosCard[i].setDados();
+                if(!dadosCard[i].verificaData())
+                {
+                    dadosCard.RemoveAt(i);
+                    tamList--;
+                    i--;
+                }
             }
 
             return dadosCard;

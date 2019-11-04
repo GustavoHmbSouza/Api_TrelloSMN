@@ -3,3 +3,8 @@ F:\RepositoriesPessoal\TrelloSMN\TrelloSMN\Domain\bin\Debug\Domain.pdb
 F:\RepositoriesPessoal\TrelloSMN\TrelloSMN\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache
 F:\RepositoriesPessoal\TrelloSMN\TrelloSMN\Domain\obj\Debug\Domain.dll
 F:\RepositoriesPessoal\TrelloSMN\TrelloSMN\Domain\obj\Debug\Domain.pdb
+F:\RepositoriesPessoal\Api_TrelloSMN\Api_TrelloSMN\Domain\bin\Debug\Domain.dll
+F:\RepositoriesPessoal\Api_TrelloSMN\Api_TrelloSMN\Domain\bin\Debug\Domain.pdb
+F:\RepositoriesPessoal\Api_TrelloSMN\Api_TrelloSMN\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache
+F:\RepositoriesPessoal\Api_TrelloSMN\Api_TrelloSMN\Domain\obj\Debug\Domain.dll
+F:\RepositoriesPessoal\Api_TrelloSMN\Api_TrelloSMN\Domain\obj\Debug\Domain.pdb
