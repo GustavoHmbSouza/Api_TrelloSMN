@@ -46,6 +46,7 @@
     <Compile Include="DadosTrello\IDadosTrelloService.cs" />
     <Compile Include="Entities\Badges.cs" />
     <Compile Include="Entities\DadosCard.cs" />
+    <Compile Include="Entities\Membro.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -14,18 +14,21 @@ namespace Domain.Entities
 
 
         public DateTime Dat_Entrega { get; set; }
+        public string Nom_DataFormatada { get; set; }
         public string Nom_Descricao { get; set; }
         public string Nom_Sigla { get; set; }
         public string Nom_Name { get; set; }
         public string Nom_Url { get; set; }
         public string Nom_Atrasado { get; set; }
         public Badges badges { get; set; }
+        public Membro[] membros {get; set; }
 
         public void setDados()
         {
             setSiglaDescricao();
             Nom_Descricao = desc;
             Dat_Entrega = Convert.ToDateTime(due);
+            Nom_DataFormatada = Dat_Entrega.ToString("g");
             Nom_Url = url;
             badges.setDados();
         }
@@ -33,9 +36,9 @@ namespace Domain.Entities
         private void setSiglaDescricao()
         {
             string[] partes = name.Split('-');
-            Nom_Sigla = partes[0];
+            Nom_Sigla = partes[0] + '-' + partes[1];
 
-            for (int i = 1; i != partes.Length; i++)
+            for (int i = 2; i < partes.Length; i++)
                 Nom_Name += partes[i];
         }
 
