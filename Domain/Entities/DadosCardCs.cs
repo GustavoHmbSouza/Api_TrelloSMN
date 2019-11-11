@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Domain.Entities
 {
-    public class DadosCard
+    public class DadosCardCs
     {
         public string Id { get; set; }
         public string due { get; set; }
@@ -20,8 +21,8 @@ namespace Domain.Entities
         public string Nom_Name { get; set; }
         public string Nom_Url { get; set; }
         public string Nom_Atrasado { get; set; }
-        public Badges badges { get; set; }
-        public Membro[] membros {get; set; }
+        public BadgesCs badges { get; set; }
+        public List<MembroCs>membros {get; set; }
 
         public void setDados()
         {
@@ -31,6 +32,7 @@ namespace Domain.Entities
             Nom_DataFormatada = Dat_Entrega.ToString("g");
             Nom_Url = url;
             badges.setDados();
+            membros = new List<MembroCs>();
         }
 
         private void setSiglaDescricao()

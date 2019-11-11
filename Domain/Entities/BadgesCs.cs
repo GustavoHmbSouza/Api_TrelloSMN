@@ -2,7 +2,7 @@
 
 namespace Domain.Entities
 {
-    public class Badges
+    public class BadgesCs
     {
         public string attachments { get; set; }
         public string checkItems { get; set; }

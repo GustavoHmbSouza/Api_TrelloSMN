@@ -1,6 +1,6 @@
 ﻿namespace Domain.Entities
 {
-    public class Membro
+    public class MembroCs
     {
         public string avatarHash { get; set; }
         public string fullName { get; set; }

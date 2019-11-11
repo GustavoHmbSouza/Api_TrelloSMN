@@ -1,4 +1,5 @@
 ﻿using Domain.DadosTrello;
+using Domain.Membro;
 using Repository.RepositoriesApiTrello;
 using SimpleInjector;
 using SimpleInjector.Lifestyles;
@@ -24,11 +25,12 @@ namespace Api.App_Start
         private static void RegisterRepositories()
         {
             container.Register<IDadosTrelloService, DadosTrelloService>(); 
-            container.Register<IDadosQuadroDesenvRepository, DadosQuadroDesenvRepository>(); 
         }
 
         private static void RegisterServices()
         {
+            container.Register<IDadosQuadroDesenvRepository, DadosQuadroDesenvRepository>();
+            container.Register<IMembroRepository, MembroRepository>();
         }
     }
 }
