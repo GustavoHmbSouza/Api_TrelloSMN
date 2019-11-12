@@ -1,10 +1,20 @@
-﻿using System;
+﻿using Domain.DadosTrello;
+using Domain.Membro;
+using System;
 using System.Collections.Generic;
 
 namespace Domain.Entities
 {
     public class DadosCardCs
     {
+        IDadosQuadroDesenvRepository _dadosQuadroDesenvRepository;
+        IMembroRepository _membroRepository;
+        public DadosCardCs(IDadosQuadroDesenvRepository dadosQuadroDesenvRepository, IMembroRepository membroRepository)
+        {
+            _dadosQuadroDesenvRepository = dadosQuadroDesenvRepository;
+            _membroRepository = membroRepository;
+        }
+
         public string Id { get; set; }
         public string due { get; set; }
         public bool dueComplete { get; set; }
@@ -22,7 +32,8 @@ namespace Domain.Entities
         public string Nom_Url { get; set; }
         public string Nom_Atrasado { get; set; }
         public BadgesCs badges { get; set; }
-        public List<MembroCs>membros {get; set; }
+        public List<MembroCs> membros {get; set; }
+        public Comentarios comentarios { get; set; }
 
         public void setDados()
         {

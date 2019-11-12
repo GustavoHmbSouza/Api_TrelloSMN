@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RepositoriesApiTrello\ComentarioRepository.cs" />
     <Compile Include="RepositoriesApiTrello\DadosQuadroDesenvRepository.cs" />
     <Compile Include="RepositoriesApiTrello\MembroRepository.cs" />
   </ItemGroup>

@@ -1,4 +1,5 @@
-﻿using Domain.Entities;
+﻿using Domain.Comentario;
+using Domain.Entities;
 using Domain.Membro;
 using System.Collections.Generic;
 
@@ -8,11 +9,13 @@ namespace Domain.DadosTrello
     {
         IDadosQuadroDesenvRepository _dadosQuadroDesenvRepository;
         IMembroRepository _membroRepository;
+        IComentarioRepository _comentariosRepository;
 
-        public DadosTrelloService(IDadosQuadroDesenvRepository dadosQuadroDesenvRepository, IMembroRepository membroRepository)
+        public DadosTrelloService(IDadosQuadroDesenvRepository dadosQuadroDesenvRepository, IMembroRepository membroRepository, IComentarioRepository comentariosRepository)
         {
             _dadosQuadroDesenvRepository = dadosQuadroDesenvRepository;
             _membroRepository = membroRepository;
+            _comentariosRepository = comentariosRepository;
         }
 
         public DadosCardProcessadosCs Get()
@@ -32,12 +35,15 @@ namespace Domain.DadosTrello
                     continue;
                 }
 
+                //Popula os membros
                 for (int j = 0; j != dadosCard[i].idMembers.Length; j++)
                 {
                     dadosCard[i].membros.Add(_membroRepository.Get(dadosCard[i].idMembers[j]));
                 }
 
-
+                //Popula os comentários
+                dadosCard[i].comentarios = _comentariosRepository.Get(dadosCard[i].Id);
+                
 
                 if (dadosCard[i].Nom_Atrasado == "Atencao")
                 {

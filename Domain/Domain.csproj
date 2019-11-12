@@ -41,9 +41,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Comentarios\IComentarioRepository.cs" />
     <Compile Include="DadosTrello\DadosTrelloService.cs" />
     <Compile Include="DadosTrello\IDadosQuadroDesenvRepository.cs" />
     <Compile Include="DadosTrello\IDadosTrelloService.cs" />
+    <Compile Include="Entities\Comentarios.cs" />
     <Compile Include="Entities\DadosCardProcessadosCs.cs" />
     <Compile Include="Membro\IMembroRepository.cs" />
     <Compile Include="Entities\BadgesCs.cs" />

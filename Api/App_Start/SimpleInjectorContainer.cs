@@ -1,4 +1,5 @@
-﻿using Domain.DadosTrello;
+﻿using Domain.Comentario;
+using Domain.DadosTrello;
 using Domain.Membro;
 using Repository.RepositoriesApiTrello;
 using SimpleInjector;
@@ -30,7 +31,8 @@ namespace Api.App_Start
         private static void RegisterServices()
         {
             container.Register<IDadosQuadroDesenvRepository, DadosQuadroDesenvRepository>();
-            container.Register<IMembroRepository, MembroRepository>();
+            container.Register<IMembroRepository, MembroRepository>(); 
+            container.Register<IComentarioRepository, ComentarioRepository>();
         }
     }
 }
