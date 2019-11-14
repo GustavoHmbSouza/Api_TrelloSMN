@@ -26,14 +26,7 @@ namespace Domain.DadosTrello
             int tamList = dadosCard.Count;
             for (int i=0; i< tamList; i++)
             {
-                dadosCard[i].setDados();
-                if(!dadosCard[i].verificaData())
-                {
-                    dadosCard.RemoveAt(i);
-                    tamList--;
-                    i--;
-                    continue;
-                }
+                dadosCard[i].setDados();               
 
                 //Popula os membros
                 for (int j = 0; j != dadosCard[i].idMembers.Length; j++)
@@ -43,7 +36,15 @@ namespace Domain.DadosTrello
 
                 //Popula os comentários
                 dadosCard[i].comentarios = _comentariosRepository.Get(dadosCard[i].Id);
-                
+
+                //Filtra os comentarios
+                if (!dadosCard[i].comentarios.filtraComentarios())
+                {
+                    dadosCard.RemoveAt(i);
+                    tamList--;
+                    i--;
+                    continue;
+                }
 
                 if (dadosCard[i].Nom_Atrasado == "Atencao")
                 {

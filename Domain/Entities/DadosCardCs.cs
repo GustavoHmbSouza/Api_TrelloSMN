@@ -25,7 +25,7 @@ namespace Domain.Entities
 
 
         public DateTime Dat_Entrega { get; set; }
-        public string Nom_DataFormatada { get; set; }
+        public string Nom_DataEntregaFormatada { get; set; }
         public string Nom_Descricao { get; set; }
         public string Nom_Sigla { get; set; }
         public string Nom_Name { get; set; }
@@ -40,10 +40,11 @@ namespace Domain.Entities
             setSiglaDescricao();
             Nom_Descricao = desc;
             Dat_Entrega = Convert.ToDateTime(due);
-            Nom_DataFormatada = Dat_Entrega.ToString("g");
+            Nom_DataEntregaFormatada = Dat_Entrega.ToString("g");
             Nom_Url = url;
             badges.setDados();
             membros = new List<MembroCs>();
+            verificaData();
         }
 
         private void setSiglaDescricao()
@@ -55,26 +56,37 @@ namespace Domain.Entities
                 Nom_Name += partes[i];
         }
 
-        public bool verificaData()
+        public void verificaData()
         {
+            if(Dat_Entrega == Convert.ToDateTime("0001-01-01T00:00:00"))
+            {
+                return;
+            }
+
+            DateTime DataEntregaAux = Dat_Entrega;
+
+            int diasAVerificar = Dat_Entrega.DayOfYear - DateTime.Now.DayOfYear;
+
+            for(int i=0; i < diasAVerificar; i++)
+            {
+                if (DataEntregaAux.DayOfWeek == DayOfWeek.Saturday || DataEntregaAux.DayOfWeek == DayOfWeek.Sunday)
+                {
+                    Dat_Entrega = Dat_Entrega.AddDays(-1);
+                }
+                DataEntregaAux = DataEntregaAux.AddDays(-1);
+            }
+
             if (dueComplete)
             {
                 Nom_Atrasado = "Concluido";
-                return true;
             }
-            else if(DateTime.Now.DayOfYear > Dat_Entrega.DayOfYear && Dat_Entrega != Convert.ToDateTime("0001-01-01T00:00:00"))
+            else if(DateTime.Now.DayOfYear > Dat_Entrega.DayOfYear)
             {
                 Nom_Atrasado = "Atrasado";
-                return true;
             }
             else if (Dat_Entrega.DayOfYear - DateTime.Now.DayOfYear >= 0 && Dat_Entrega.DayOfYear - DateTime.Now.DayOfYear < 3)
             {
-                Nom_Atrasado = "Atenção";
-                return true;
-            }
-            else 
-            {
-                return false;
+                Nom_Atrasado = "Atencao";
             }
         }
     }
