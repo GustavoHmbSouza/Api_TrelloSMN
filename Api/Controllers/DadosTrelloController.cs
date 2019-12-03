@@ -21,7 +21,7 @@ namespace Api.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest("Erro ao excluir conta: " + ex.Message);
+                return BadRequest("Erro ao consultar os dados do trello: " + ex.Message);
             }
         }
     }

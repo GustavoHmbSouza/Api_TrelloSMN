@@ -7,12 +7,10 @@ namespace Domain.Entities
 {
     public class DadosCardCs
     {
-        IDadosQuadroDesenvRepository _dadosQuadroDesenvRepository;
-        IMembroRepository _membroRepository;
-        public DadosCardCs(IDadosQuadroDesenvRepository dadosQuadroDesenvRepository, IMembroRepository membroRepository)
+
+        public DadosCardCs()
         {
-            _dadosQuadroDesenvRepository = dadosQuadroDesenvRepository;
-            _membroRepository = membroRepository;
+            membros = new List<MembroCs>();
         }
 
         public string Id { get; set; }
@@ -43,7 +41,6 @@ namespace Domain.Entities
             Nom_DataEntregaFormatada = Dat_Entrega.ToString("g");
             Nom_Url = url;
             badges.setDados();
-            membros = new List<MembroCs>();
             verificaData();
         }
 
@@ -60,6 +57,7 @@ namespace Domain.Entities
         {
             if(Dat_Entrega == Convert.ToDateTime("0001-01-01T00:00:00"))
             {
+                Nom_Atrasado = "Previsto";
                 return;
             }
 
@@ -87,6 +85,10 @@ namespace Domain.Entities
             else if (Dat_Entrega.DayOfYear - DateTime.Now.DayOfYear >= 0 && Dat_Entrega.DayOfYear - DateTime.Now.DayOfYear < 3)
             {
                 Nom_Atrasado = "Atencao";
+            }
+            else
+            {
+                Nom_Atrasado = "Previsto";
             }
         }
     }
