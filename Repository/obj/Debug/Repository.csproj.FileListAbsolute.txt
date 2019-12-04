@@ -25,3 +25,12 @@ D:\Repositories\Api_TrelloSMN\Repository\bin\Debug\Newtonsoft.Json.xml
 D:\Repositories\Api_TrelloSMN\Repository\obj\Debug\Repository.csprojResolveAssemblyReference.cache
 D:\Repositories\Api_TrelloSMN\Repository\obj\Debug\Repository.dll
 D:\Repositories\Api_TrelloSMN\Repository\obj\Debug\Repository.pdb
+D:\repositorios\Api_TrelloSMN\Repository\bin\Debug\Repository.dll
+D:\repositorios\Api_TrelloSMN\Repository\bin\Debug\Repository.pdb
+D:\repositorios\Api_TrelloSMN\Repository\bin\Debug\Domain.dll
+D:\repositorios\Api_TrelloSMN\Repository\bin\Debug\Newtonsoft.Json.dll
+D:\repositorios\Api_TrelloSMN\Repository\bin\Debug\Domain.pdb
+D:\repositorios\Api_TrelloSMN\Repository\bin\Debug\Newtonsoft.Json.xml
+D:\repositorios\Api_TrelloSMN\Repository\obj\Debug\Repository.csprojResolveAssemblyReference.cache
+D:\repositorios\Api_TrelloSMN\Repository\obj\Debug\Repository.dll
+D:\repositorios\Api_TrelloSMN\Repository\obj\Debug\Repository.pdb

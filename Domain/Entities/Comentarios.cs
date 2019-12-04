@@ -18,6 +18,7 @@ namespace Domain.Entities
         public string Dat_DataInicio { get; set; }
         public string Dat_DataFim { get; set; }
         public string Nom_Fase { get; set; }
+        public double Num_HorasConcluido { get; set; }
 
         public bool filtraComentarios()
         {

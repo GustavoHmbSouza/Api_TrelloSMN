@@ -77,6 +77,7 @@ namespace Domain.DadosTrello
                 {
                     qtdHorasConcluido = 0;
                 }
+                dadosCard[i].comentarios.Num_HorasConcluido = qtdHorasConcluido;
                 qtdHorasPrevisto = dadosCard[i].comentarios.Num_Horas - qtdHorasConcluido;
 
 
