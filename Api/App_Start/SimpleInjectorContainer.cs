@@ -1,5 +1,6 @@
 ﻿using Domain.Comentario;
 using Domain.DadosTrello;
+using Domain.Login;
 using Domain.Membro;
 using Repository.RepositoriesApiTrello;
 using SimpleInjector;
@@ -33,6 +34,7 @@ namespace Api.App_Start
             container.Register<IDadosQuadroDesenvRepository, DadosQuadroDesenvRepository>();
             container.Register<IMembroRepository, MembroRepository>(); 
             container.Register<IComentarioRepository, ComentarioRepository>();
+            container.Register<ILoginService, LoginService>();
         }
     }
 }

@@ -266,3 +266,6 @@ D:\repositorios\Api_TrelloSMN\Api\bin\System.Web.Mvc.xml
 D:\repositorios\Api_TrelloSMN\Api\obj\Debug\Api.csprojResolveAssemblyReference.cache
 D:\repositorios\Api_TrelloSMN\Api\obj\Debug\Api.dll
 D:\repositorios\Api_TrelloSMN\Api\obj\Debug\Api.pdb
+D:\repositorios\Api_TrelloSMN\Api\bin\System.Web.Cors.dll
+D:\repositorios\Api_TrelloSMN\Api\bin\System.Web.Http.Cors.dll
+D:\repositorios\Api_TrelloSMN\Api\bin\System.Web.Http.Cors.xml
