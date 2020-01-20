@@ -54,13 +54,13 @@
     <Folder Include="Repositories\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Domain\Domain.csproj">
-      <Project>{480E0AEF-AD4C-488A-93A4-387AD0B89430}</Project>
-      <Name>Domain</Name>
-    </ProjectReference>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <ProjectReference Include="..\Domain\Domain.csproj">
+      <Project>{480e0aef-ad4c-488a-93a4-387ad0b89430}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
