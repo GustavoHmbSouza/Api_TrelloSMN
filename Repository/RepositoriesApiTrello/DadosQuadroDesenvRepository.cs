@@ -16,8 +16,6 @@ namespace Repository.RepositoriesApiTrello
 
         public List<DadosCardCs> Get()
         {
-
-            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Ssl3;
             string key = "62c66f984189c61a289abd38ec4794e1";
             string tokken = "2d7a693ed4467904ff0335b87929580f50f434f9a94ed683e709c3273a1821fa";
             string quadro = "LNLrC30H";

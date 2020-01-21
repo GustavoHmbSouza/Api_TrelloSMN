@@ -15,6 +15,6 @@ D:\Repositories\Api_TrelloSMN\Domain\obj\Debug\Domain.dll
 D:\Repositories\Api_TrelloSMN\Domain\obj\Debug\Domain.pdb
 D:\repositorios\Api_TrelloSMN\Domain\bin\Debug\Domain.dll
 D:\repositorios\Api_TrelloSMN\Domain\bin\Debug\Domain.pdb
-D:\repositorios\Api_TrelloSMN\Domain\obj\Debug\Domain.csprojResolveAssemblyReference.cache
 D:\repositorios\Api_TrelloSMN\Domain\obj\Debug\Domain.dll
 D:\repositorios\Api_TrelloSMN\Domain\obj\Debug\Domain.pdb
+D:\repositorios\Api_TrelloSMN\Domain\obj\Debug\Domain.csprojAssemblyReference.cache
